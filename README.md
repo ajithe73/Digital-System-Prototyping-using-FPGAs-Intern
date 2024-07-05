@@ -1,5 +1,5 @@
 # Digital-System-Prototyping-using-FPGAs-Intern-Documentaion-Repo
-
+[link for learning verilog](https://www.chipverify.com/verilog/verilog-tutorial)
 ## Introduction 
 
 Repository documenting the Summer Internship’24 on Digital System Prototyping using FPGAs (NIELIT Calicut)
