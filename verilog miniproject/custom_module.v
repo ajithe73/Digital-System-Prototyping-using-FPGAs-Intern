@@ -16,10 +16,10 @@ module custom_module (
         end else begin
             case (select)
                 2'b00: begin
-                    parallel_output <= {serial_in, parallel_output[7:1]}; // shift right
+                    parallel_output <= {serial_in, parallel_in[7:1]}; // shift right
                 end
                 2'b01: begin
-                    parallel_output <= {parallel_output[6:0], serial_in}; // shift left
+                    parallel_output <= {parallel_in[6:0], serial_in}; // shift left
                 end
                 2'b10: begin
                     temp <= temp << 1;
