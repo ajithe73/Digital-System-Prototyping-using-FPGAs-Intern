@@ -11,3 +11,11 @@ shift right ^
 <br>
 serial in parallel out ^
 
+
+
+for the codes reffer 
+
+[the codes](https://github.com/ARX-0/Digital-System-Prototyping-using-FPGAs-Intern/blob/main/verilog%20miniproject/custom_module.v)
+
+[the testbench for the code](https://github.com/ARX-0/Digital-System-Prototyping-using-FPGAs-Intern/blob/main/verilog%20miniproject/custom_module_tb.v)
+
