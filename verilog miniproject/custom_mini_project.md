@@ -13,3 +13,6 @@ for the codes reffer
 
 [the testbench for the code](https://github.com/ARX-0/Digital-System-Prototyping-using-FPGAs-Intern/blob/main/verilog%20miniproject/custom_module_tb.v)
 
+# Explaination 
+
+![](https://github.com/ARX-0/Digital-System-Prototyping-using-FPGAs-Intern/blob/main/MSB_LSB_in_shiftleft_shift_right.png)
