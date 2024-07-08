@@ -1,3 +1,7 @@
+# NOTE:-
+
+the outputs are all delayed by a clock cycle since being placed in an always block so please keep in mind while reading the simulation
+
 ## Shift Left
 ![MSB-forgotten-shiftleft](https://github.com/ARX-0/Digital-System-Prototyping-using-FPGAs-Intern/assets/143102635/b1485c75-caa5-4390-b50f-6e34291f2e37)
 ## Shift Right
