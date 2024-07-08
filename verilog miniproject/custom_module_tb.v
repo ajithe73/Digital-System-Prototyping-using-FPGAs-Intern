@@ -1,10 +1,12 @@
+`timescale 1ns / 1ps
+
 module custom_module_tb;
 
     // Inputs
     reg clk;
     reg reset;
     reg [1:0] select;
-    reg serial_in;
+    reg [2:0] serial_in;
     reg [7:0] parallel_in;
 
     // Outputs
@@ -31,32 +33,34 @@ module custom_module_tb;
         // Initialize inputs
         reset = 0;
         select = 2'b00;
-        serial_in = 0;
+        serial_in = 3'b000;
         parallel_in = 8'b10101010;
 
         // Apply reset
         #10 reset = 1;
 
         // Test shift right
-        #10 select = 2'b00; serial_in = 1;
-        #10 select = 2'b00; serial_in = 0;
-        #10 select = 2'b00; serial_in = 1;
+        #10 select = 2'b00; serial_in = 3'b001;
+        #10 select = 2'b00; serial_in = 3'b010;
+        #10 select = 2'b00; serial_in = 3'b100;
 
         // Test shift left
-        #10 select = 2'b01; serial_in = 1;
-        #10 select = 2'b01; serial_in = 0;
-        #10 select = 2'b01; serial_in = 1;
+        #10 select = 2'b01; serial_in = 3'b001;
+        #10 select = 2'b01; serial_in = 3'b010;
+        #10 select = 2'b01; serial_in = 3'b100;
 
-        // Test loading parallel input (no serial input involved)
+        // Test loading parallel input
         #10 select = 2'b11;
 
         // Test shifting into temp register
-        #10 select = 2'b10; serial_in = 1;
-        #10 select = 2'b10; serial_in = 0;
-        #10 select = 2'b10; serial_in = 1;
-
+        #10 select = 2'b10; serial_in = 3'b100;
+        #10 select = 2'b10; serial_in = 3'b000;
+        #10 select = 2'b10; serial_in = 3'b100;
+        #10 select = 2'b10; serial_in = 3'b000;
+        #10 select = 2'b10; serial_in = 3'b100;
+        
         // End of test
-        #20 $finish;
+        #40 $finish;
     end
 
     // Monitor outputs
@@ -66,4 +70,3 @@ module custom_module_tb;
     end
 
 endmodule
-
